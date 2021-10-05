@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: stephanjs
+spec:
+  to:
+    name: stephanjs
+    kind: Service
+    weight: 100
+  wildcardPolicy: None

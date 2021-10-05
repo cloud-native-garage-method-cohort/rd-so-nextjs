@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rd-so-nextjs
+data:
+  branch: main
+  host: github.com
+  protocol: https
+  repo: rd-so-nextjs-manifest
+  org: cloud-native-garage-method-cohort
