@@ -47,7 +47,7 @@ spec:
         - name: IMAGE
           value: "$(params.image-repo):$(tasks.clone-repository.results.commit)"
       runAfter:
-        - run-tests
+        - clone-repository
       taskRef:
         name: buildah
         kind: ClusterTask
@@ -67,7 +67,7 @@ spec:
         - name: source-repo
           value: "$(params.source-repo)"
       runAfter:
-        - create-image
+        - clone-repository
       taskRef:
         name: create-configuration
       workspaces:
