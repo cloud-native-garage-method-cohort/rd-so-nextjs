@@ -29,7 +29,7 @@ spec:
         kind: ClusterTask
       workspaces:
         - name: output
-          workspace: pipeline-shared-data
+          workspace: e2e-build
     - name: run-tests
       params:
         - name: ARGS
@@ -41,7 +41,7 @@ spec:
         name: npm
       workspaces:
         - name: source
-          workspace: pipeline-shared-data
+          workspace: e2e-build
     - name: create-image
       params:
         - name: IMAGE
@@ -53,7 +53,7 @@ spec:
         kind: ClusterTask
       workspaces:
         - name: source
-          workspace: pipeline-shared-data
+          workspace: e2e-build
     - name: create-configuration
       params:
         - name: app-name
@@ -72,7 +72,7 @@ spec:
         name: create-configuration
       workspaces:
         - name: source
-          workspace: pipeline-shared-data
+          workspace: e2e-build
     - name: deploy
       params:
         - name: manifest
@@ -85,7 +85,7 @@ spec:
         name: deploy
       workspaces:
         - name: source
-          workspace: pipeline-shared-data
+          workspace: e2e-build
     - name: save-configuration
       params:
         - name: manifest
@@ -100,9 +100,9 @@ spec:
         name: save-configuration
       workspaces:
         - name: source
-          workspace: pipeline-shared-data
+          workspace: e2e-build
         - name: target
           workspace: production-repository
   workspaces:
-    - name: pipeline-shared-data
+    - name: e2e-build
     - name: production-repository

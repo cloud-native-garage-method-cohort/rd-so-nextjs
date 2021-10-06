@@ -2,4 +2,4 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
-  name: vcs-trigger
+  name: app-repo-trigger

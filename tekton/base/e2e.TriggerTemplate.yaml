@@ -2,26 +2,26 @@
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
-  name: vcs-trigger
+  name: app-repo-trigger
 spec:
   resourcetemplates:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
       metadata:
-        generateName: stephan-js-
+        generateName: e2e-nextjs-
       spec:
         pipelineRef:
-          name: build-push-stephan-js
+          name: e2e-nextjs
         serviceAccountName: build-bot
         params:
             - name: app-name
-              value: stephanjs
+              value: e2e-nextjs
             - name: source-repo
               value: https://github.com/cloud-native-garage-method-cohort/rd-so-nextjs.git
             - name: image-repo
               value: quay.io/stephan_orlowsky/rd-so-nextjs
         workspaces:
-          - name: pipeline-shared-data
+          - name: e2e-build
             volumeClaimTemplate:
               spec:
                 accessModes:

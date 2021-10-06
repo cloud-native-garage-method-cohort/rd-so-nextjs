@@ -1,0 +1,12 @@
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: app-repo-trigger
+spec:
+  serviceAccountName: app-repo-trigger
+  triggers:
+    - bindings:
+        - ref: app-repo-trigger
+      template:
+        name: app-repo-trigger

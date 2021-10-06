@@ -2,11 +2,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: vcs-trigger
+  name: app-repo-trigger
 spec:
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: el-vcs-trigger
+    name: el-app-repo-trigger
     weight: 100
