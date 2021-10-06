@@ -81,6 +81,7 @@ spec:
           value: "$(context.pipelineRun.namespace)"
       runAfter:
         - create-configuration
+        - create-image
       taskRef:
         name: deploy
       workspaces:
