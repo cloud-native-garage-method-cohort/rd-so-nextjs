@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: stephanjs
+  name: e2e-nextjs
 spec:
   type: ClusterIP
   selector:

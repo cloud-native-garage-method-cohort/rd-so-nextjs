@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: rd-so-nextjs
+  name: e2e-nextjs
 data:
   branch: main
   host: github.com

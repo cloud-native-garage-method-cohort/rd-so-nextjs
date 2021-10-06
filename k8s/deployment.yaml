@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stephanjs
+  name: e2e-nextjs
 spec:
   replicas: 1
   selector:
@@ -19,8 +19,8 @@ spec:
       dnsPolicy: ClusterFirst
       schedulerName: default-scheduler
       containers:
-      - name: stephanjs
-        image: quay.io/stephan_orlowsky/stephanjs:1
+      - name: e2e-nextjs
+        image: quay.io/stephan_orlowsky/rd-so-nextjs:1
         ports:
         - name: http
           protocol: TCP

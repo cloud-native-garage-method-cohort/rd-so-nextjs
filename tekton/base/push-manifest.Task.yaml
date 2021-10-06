@@ -36,28 +36,28 @@ spec:
         - name: GIT_PROTOCOL
           valueFrom:
             configMapKeyRef:
-              name: rd-so-nextjs
+              name: e2e-nextjs
               key: protocol
               optional: true
         - name: GIT_HOST
           valueFrom:
             configMapKeyRef:
-              name: rd-so-nextjs
+              name: e2e-nextjs
               key: host
         - name: GIT_ORG
           valueFrom:
             configMapKeyRef:
-              name: rd-so-nextjs
+              name: e2e-nextjs
               key: org
         - name: GIT_REPO
           valueFrom:
             configMapKeyRef:
-              name: rd-so-nextjs
+              name: e2e-nextjs
               key: repo
         - name: GIT_BRANCH
           valueFrom:
             configMapKeyRef:
-              name: rd-so-nextjs
+              name: e2e-nextjs
               key: branch
               optional: true
       script: |
